@@ -13,7 +13,51 @@
             <a href="index.html">
                 <img src="https://www.kalbela.com/templates/mob-view/images/logo.png" alt="PKCSBD Logo" class="h-10">
             </a>
-            <div class="flex items-center gap-5">
+            <div class="hidden lg:flex items-center justify-between w-[750px] overflow-auto">
+                <a href="#" class="flex items-center gap-1">
+                    <i class="fa-sharp fa-solid fa-table-list"></i>
+                    <span>আজকের পত্রিকা</span>
+                </a>
+                <a href="#" class="flex items-center gap-1">
+                    <i class="fa-regular fa-newspaper"></i>
+                    <span>ই-পেপার</span>
+                </a>
+                <button x-data="{magazing: false}" @click="magazing = !magazing" @click.outside="magazing = false" href="#" class="relative flex items-center gap-1">
+                    <i class="fa fa-book"></i>
+                    <span>ম্যাগাজিন</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                    <div x-show="magazing" class="x-cloak absolute flex flex-col shadow-md top-[28px] border bg-white rounded-md whitespace-nowrap">
+                        <a href="" class="p-2 border-b hover:bg-gray-100">ঈদ আনন্দ ২০২৪</a>
+                        <a href="" class="p-2 border-b hover:bg-gray-100">ঈদ সংখ্যা ২০২৪</a>
+                        <a href="" class="p-2 border-b hover:bg-gray-100">ঈদ সংখ্যা ২০২৩</a>
+                        <a href="" class="p-2 border-b hover:bg-gray-100">সারাবেলা ম্যাগাজিন</a>
+                        <a href="" class="p-2 border-b hover:bg-gray-100">টি ২০ ম্যাগাজিন</a>
+                        <a href="" class="p-2 border-b hover:bg-gray-100">ফ্রি হিট</a>
+                    </div>
+                </button>
+                <a href="#" class="flex items-center gap-1">
+                    <img src="public/Images/archive.webp" alt="" class="h-4">
+                    <span>আর্কাইভ</span>
+                </a>
+                <a href="#" class="flex items-center gap-1">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <span>সোশ্যাল মিডিয়া</span>
+                </a>
+                <a href="#" class="flex items-center gap-1 h-4">
+                    <svg id="LOGO_BG_Image" data-name="LOGO BG&nbsp;Image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 216.92" height="16px"><path d="M116.73,315.7c-1.79-.56-3.61-1-5.35-1.69a18.24,18.24,0,0,1-12.13-17.68q0-55.33,0-110.67c0-11.11,7-19.8,18-20.59,10.68-.77,21.45-.17,32.39-.17v16.15h-3.11c-6.89,0-13.79-.16-20.67.08a21.2,21.2,0,0,0-7.57,1.85c-3.43,1.53-5.1,4.31-5.09,8.34.1,32.74.06,65.48.06,98.21a11.83,11.83,0,0,0,11.87,12c6.89.08,13.78,0,20.67,0h79.26c6.76,0,11.08-4.13,11.09-10.81q0-49.53,0-99.06c0-.64-.08-1.29-.14-2.23h-9.59l17.45-29.77c5.84,9.94,11.48,19.56,17.37,29.58h-8.72V294.51c0,11.46-5.24,18-16.46,20.69a4.54,4.54,0,0,0-1,.5Z" transform="translate(-99.24 -98.78)"></path><path d="M190.26,128.37h99.65v8.85H190.26Z" transform="translate(-99.24 -98.78)"></path><path d="M190.26,151.35v-8.8h99.63v8.8Z" transform="translate(-99.24 -98.78)"></path><path d="M297.75,98.78c1.79.56,3.61,1,5.35,1.69a18.24,18.24,0,0,1,12.13,17.68q0,55.33,0,110.67c0,11.11-7,19.8-18,20.59-10.68.77-21.45.17-32.39.17V233.43H268c6.89,0,13.79.16,20.67-.08a21.2,21.2,0,0,0,7.57-1.85c3.43-1.53,5.1-4.31,5.09-8.34-.1-32.74-.06-65.48-.06-98.21a11.83,11.83,0,0,0-11.87-12c-6.89-.08-13.78,0-20.67,0H189.42c-6.76,0-11.08,4.13-11.09,10.81q0,49.53,0,99.06c0,.64.08,1.29.14,2.23h9.59l-17.45,29.77c-5.84-9.94-11.48-19.56-17.37-29.58H162V120c0-11.46,5.24-18,16.46-20.69a4.54,4.54,0,0,0,1-.5Z" transform="translate(-99.24 -98.78)"></path><path d="M224.22,286.11H124.57v-8.85h99.65Z" transform="translate(-99.24 -98.78)"></path><path d="M224.22,263.13v8.8H124.59v-8.8Z" transform="translate(-99.24 -98.78)"></path></svg>
+                    <span>বাংলা কনভার্টার</span>
+                </a>
+            </div>
+            <div class="hidden lg:flex gap-3">
+                <button class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="relative h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center">
+                    <span class="absolute top-1 right-2 h-1.5 w-1.5 bg-red-700 rounded-full"></span>
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+            </div>    
+            <div class="flex lg:hidden items-center gap-5">
                 <a href="#" class="flex items-center text-alpha">
                     <i class="fa-regular fa-newspaper me-2"></i>
                     <span>ই-পেপার</span>
@@ -158,14 +202,130 @@
    </div>
    <!-- AD section -->
    <section class="w-full">
-    <div class="w-11/12 md:w-10/12 m-auto py-1 flex items-center justify-center my-2">
-        <img src="public/Images/AD.jpeg" alt="">
+    <div class="parent flex items-center justify-center my-2">
+        <img src="public/Images/AD.jpeg" alt="" class="md:hidden">
+        <img src="https://tpc.googlesyndication.com/simgad/2280804629851550597" alt="" class="hidden md:inline">
     </div>
    </section>
    <!-- Main section -->
     <main class="w-full">
-        <div class="w-11/12 md:w-10/12 m-auto"></div>
+        <div class="parent grid grid-cols-1 lg:grid-cols-3 gap-2">
+            <div class="col-span-2 p-2">
+                <div class="w-full flex items-center gap-2 font-medium text-lg pb-2">
+                    <i class="fa-solid fa-house"></i>
+                    <span>/</span>
+                    <span class="text-blue-700">সর্বশেষ সব খবর</span>
+                </div>
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-7">
+                    <div class="col-span-1 flex gap-2">
+                        <div>
+                            <img class="h-full w-full object-cover" src="https://www.kalbela.com/cache-images/news_photos/2025/01/04/resize-105x70x1x0-image_152904_1735960575.webp" alt="">
+                        </div>
+                        <div>
+                            <h4>ভিনির লাল কার্ডের পরও ১০ জনের রিয়ালের অবিশ্বাস্য জয়</h4>
+                            <p class="text-sm text-gray-600 flex items-center gap-y">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>০৪ জানুয়ারি ২০২৫, ০৯:১৬ এএম</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex gap-2">
+                        <div>
+                            <img class="h-full w-full object-cover" src="https://www.kalbela.com/cache-images/news_photos/2025/01/04/resize-105x70x1x0-image_152904_1735960575.webp" alt="">
+                        </div>
+                        <div>
+                            <h4>ভিনির লাল কার্ডের পরও ১০ জনের রিয়ালের অবিশ্বাস্য জয়</h4>
+                            <p class="text-sm text-gray-600 flex items-center gap-y">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>০৪ জানুয়ারি ২০২৫, ০৯:১৬ এএম</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex gap-2">
+                        <div>
+                            <img class="h-full w-full object-cover" src="https://www.kalbela.com/cache-images/news_photos/2025/01/04/resize-105x70x1x0-image_152904_1735960575.webp" alt="">
+                        </div>
+                        <div>
+                            <h4>ভিনির লাল কার্ডের পরও ১০ জনের রিয়ালের অবিশ্বাস্য জয়</h4>
+                            <p class="text-sm text-gray-600 flex items-center gap-y">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>০৪ জানুয়ারি ২০২৫, ০৯:১৬ এএম</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex items-center justify-center pt-5">
+                    <button class="text-blue-700 m-auto border border-blue-700 px-2.5 font-semibold hover:text-white hover:bg-blue-700 transition-all duration-150 rounded-md">আরও</button>
+                </div>
+            </div>
+            <div x-data="tabComponent()" class="col-span-1 border rounded-md p-2">
+                <div class="w-full flex items-center gap-4">
+                  <button 
+                    @click="activeTab = 'latest'" 
+                    :class="activeTab === 'latest' ? 'border-black' : 'border-transparent'" 
+                    class="border-b-4">
+                    সর্বশেষ
+                  </button>
+                  <button 
+                    @click="activeTab = 'popular'" 
+                    :class="activeTab === 'popular' ? 'border-black' : 'border-transparent'" 
+                    class="border-b-4">
+                    জনপ্রিয়
+                  </button>
+                </div>
+                <hr>
+                <div class="w-full">
+                  <template x-for="item in contents[activeTab]" :key="item.id">
+                    <div class="w-full flex items-center gap-4 py-2">
+                      <span class="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center font-medium text-gray-700 text-xl" x-text="item.id"></span>
+                      <span x-text="item.text"></span>
+                    </div>
+                  </template>
+                </div>
+              </div>
+              
+        </div>
     </main>
+    <footer class="w-full border-t grid grid-cols-1 lg:grid-cols-4">
+        <div class="col-span-1 lg:col-span-2 flex flex-col">
+            <div class="w-full flex items-center">
+                <i class="fa-solid fa-circle-nodes pr-2 border-r-2"></i>
+                <span>সোশ্যাল মিডিয়া</span>
+            </div>
+            <div class="w-full flex items-center gap-2 text-xl+">
+                <a href=""><i class="fa-brands fa-facebook text-[#1878f1]"></i></a>
+                <a href=""><i class="fa-brands fa-youtube text-[#fe0000]"></i></a>
+                <a href=""><i class="fa-brands fa-twitter text-[#03a9f5]"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin text-[#0078b7]"></i></a>
+                <a href="" class="instagram-gradient"><i class="fa-brands fa-instagram text-[#1878f1]"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div class="w-full flex items-center justify-between bg-gray-200 py-1.5 px-10">
+        <span>স্বত্ব © কালবেলা মিডিয়া লিমিটেড ২০২৫</span>
+        <span>ওয়েবসাইটের কোনো লেখা, ছবি, ভিডিও অনুমতি ছাড়া ব্যবহার বেআইনি।</span>
+    </div>    
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+   <script>
+    const latestNews = [
+      { id: 1, text: 'প্রশিক্ষণের জন্য ভারত যাচ্ছেন আরও ৫০ বিচারক' },
+      { id: 2, text: 'সরকারি কর্মকর্তাদের জন্য নতুন প্রশিক্ষণ শুরু' },
+    ];
+  
+    const popularNews = [
+      { id: 1, text: 'জনপ্রিয় খবর: অর্থনীতি নিয়ে বিশেষ আলোচনা' },
+      { id: 2, text: 'জনপ্রিয় খবর: ক্রীড়া জগতের নতুন চমক' },
+    ];
+  
+    function tabComponent() {
+      return {
+        activeTab: 'latest',
+        contents: {
+          latest: latestNews,
+          popular: popularNews,
+        },
+      };
+    }
+  </script>
 </body>
 </html>
