@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="public/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body x-data="{isNavOpen: false}">
     <!-- navbar -->
    <nav class="w-full py-2 border-y my-3">
         <div class="w-11/12 m-auto items-center justify-between flex">
@@ -18,8 +18,9 @@
                     <i class="fa-regular fa-newspaper me-2"></i>
                     <span>ই-পেপার</span>
                 </a>
-                <button>
-                    <i class="fa-solid fa-bars"></i>
+                <button @click="isNavOpen = !isNavOpen">
+                    <i x-show="!isNavOpen" class="fa-solid fa-bars"></i>
+                    <i x-show="isNavOpen" class="fa-solid fa-xmark"></i>
                 </button>
             </div>
         </div>
@@ -57,7 +58,7 @@
         <a href="#">ই-পেপার</a>
    </div>
    <!-- responsive navbar content -->
-   <div class="w-full">
+   <div x-show="isNavOpen" class="w-full">
     <p class="pt-4 pb-2 w-11/12 m-auto">সোমবার, ৩০ ডিসেম্বর ২০২৪</p>
     <hr>
     <div class="w-11/12 m-auto">
@@ -102,7 +103,69 @@
         <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium">দ্বাদশ জাতীয় সংসদ নির্বাচন</button>
         <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium">রম্যবেলা</button>
     </div>
+    <div class="w-11/12 m-auto grid grid-cols-2 gap-x-7 gap-y-1 pt-1">
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <img src="public/Images/video-stories.webp" alt="" class="w-[18px]">
+            <span>ভিডিও স্টোরি</span>
+        </button>
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <img src="public/Images/photo-stories.webp" alt="" class="w-[18px]">
+            <span>ফটো স্টোরি</span>
+        </button>
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <i class="fa-regular fa-images text-[#c5282f]"></i>
+            <span>ফটোগ্যালারি</span>
+        </button>
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <i class="fa-solid fa-photo-film text-[#c5282f]"></i>
+            <span>ভিডিও গ্যালারি</span>
+        </button>
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <svg height="18px" width="18px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.319 291.319" xml:space="preserve">
+                <g>
+                    <path style="fill:#FF7700;" d="M72.83,218.485h18.207V103.832c-6.828,1.93-12.982,5.435-18.207,10.041
+                        C72.83,113.874,72.83,218.485,72.83,218.485z M36.415,140.921v77.436l1.174,0.127h17.033v-77.682H37.589
+                        C37.589,140.803,36.415,140.921,36.415,140.921z M0,179.63c0,14.102,7.338,26.328,18.207,33.147V146.52
+                        C7.338,153.329,0,165.556,0,179.63z M109.245,218.485h18.207v-109.6c-5.444-3.396-11.607-5.635-18.207-6.5V218.485z
+                         M253.73,140.803h-10.242c0.519-3.168,0.847-6.382,0.847-9.705c0-32.182-25.245-58.264-56.388-58.264
+                        c-16.896,0-31.954,7.775-42.287,19.955v125.695h108.07c20.747,0,37.589-17.388,37.589-38.855
+                        C291.319,158.182,274.477,140.803,253.73,140.803z"></path>
+                </g>
+                </svg>
+            <span>অডিও</span>
+        </button>
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <i class="fa-solid fa-thumbs-up me-2"></i>
+            <span>সোশ্যাল মিডিয়া</span>
+        </button>
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <i class="ffa-sharp fa-solid fa-table-list text-dark me-2"></i>
+            <span>আজকের পত্রিকা</span>
+        </button>
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <i class="fa-regular fa-newspaper"></i>
+            <span>ই-পেপার</span>
+        </button>
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <i class="fa-solid fa-book"></i>
+            <span>ম্যাগাজিন</span>
+        </button>
+        <button class="col-span-1 text-start border-b border-zinc-300 py-1 font-medium flex items-center gap-2">
+            <img src="public/Images/archive.webp" alt="" class="w-[18px]">
+            <span>আর্কাইভ</span>
+        </button>
+    </div>
    </div>
+   <!-- AD section -->
+   <section class="w-full">
+    <div class="w-11/12 md:w-10/12 m-auto py-1 flex items-center justify-center my-2">
+        <img src="public/Images/AD.jpeg" alt="">
+    </div>
+   </section>
+   <!-- Main section -->
+    <main class="w-full">
+        <div class="w-11/12 md:w-10/12 m-auto"></div>
+    </main>
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>
