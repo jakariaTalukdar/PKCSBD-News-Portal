@@ -260,177 +260,336 @@
             </div>
             <div x-data="tabComponent()" class="col-span-1 border rounded-md p-2">
                 <div class="w-full flex items-center gap-4">
-                  <button 
+                    <button 
                     @click="activeTab = 'latest'" 
                     :class="activeTab === 'latest' ? 'border-black' : 'border-transparent'" 
                     class="border-b-4">
                     সর্বশেষ
-                  </button>
-                  <button 
+                    </button>
+                    <button 
                     @click="activeTab = 'popular'" 
                     :class="activeTab === 'popular' ? 'border-black' : 'border-transparent'" 
                     class="border-b-4">
                     জনপ্রিয়
-                  </button>
+                    </button>
                 </div>
                 <hr>
                 <div class="w-full">
-                  <template x-for="item in contents[activeTab]" :key="item.id">
+                    <template x-for="item in contents[activeTab]" :key="item.id">
                     <div class="w-full flex items-center gap-4 py-2">
-                      <span class="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center font-medium text-gray-700 text-xl" x-text="item.id"></span>
-                      <span x-text="item.text"></span>
+                        <span class="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center font-medium text-gray-700 text-xl" x-text="item.id"></span>
+                        <span x-text="item.text"></span>
                     </div>
-                  </template>
+                    </template>
                 </div>
-              </div>
-              
+            </div>
         </div>
     </main>
     <!-- Three part section -->
+    <section class="w-full">
+    <div class="w-11/12 m-auto grid grid-cols-1 lg:grid-cols-4 gap-5">
+
+        <div class="col-span-2 flex flex-col gap-3">
+            <!-- Big card -->
+            <div class="w-full p-2 border rounded-md grid grid-cols-12 gap-2">
+                <div class="col-span-7"">
+                    <img class="object-cover h-full w-full" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152942_1735981572.webp" alt="">
+                </div>
+                <div class="col-span-5 flex flex-col gap-y-2">
+                    <h1 class="text-2xl font-semibold">তারেক রহমানের ৪ মামলা বাতিলের রায়ের বিরুদ্ধে রাষ্ট্রপক্ষের আপিল</h1>
+                    <p class="text-[13px] font-light">বাংলাদেশ জাতীয়তাবাদী দল- বিএনপির ভারপ্রাপ্ত চেয়ারম্যান তারেক রহমানের বিরুদ্ধে দায়েরকৃত চাঁদাবাজির চারটি মামলা বাতিল করেছেন হাইকোর্ট। মামলা বাতিল সংক্রান্ত হাইকোর্টের রায়ের বিরুদ্ধে লিভ টু আপিল করেছে রাষ্ট্রপক্ষ। ইতিমধ্যে রাষ্ট্রপক্ষের আপিল</p>
+                </div>
+            </div>
+            <!-- small cart part -->
+                <div class="w-full p-2 border rounded-md grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-3">
+                <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
+                    <div class="w-full">
+                        <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                    </div>
+                    <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
+                </div>
+                <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
+                    <div class="w-full">
+                        <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                    </div>
+                    <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
+                </div>
+                <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
+                    <div class="w-full">
+                        <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                    </div>
+                    <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
+                </div>
+                <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
+                    <div class="w-full">
+                        <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                    </div>
+                    <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
+                </div>
+                <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
+                    <div class="w-full">
+                        <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                    </div>
+                    <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
+                </div>
+                </div>
+        </div>
+        <div class="w-full col-span-1 flex flex-col gap-3 border p-2 rounded-md">
+            
+            <div class="w-full border-b pb-2">
+                <img src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152930_1735976931.webp" alt="">
+                <p class="text-xl font-semibold">অঞ্জনার মৃত্যু নিয়ে রহস্য</p>                
+            </div>
+
+            <div class="w-full gap-2 grid grid-cols-12 border-b pb-3">
+                <div class="col-span-4">
+                    <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152918_1735971426.webp" alt="">
+                </div>
+                <p class="col-span-8 font-semibold text-lg leading-6">বিয়ে, গায়েহলুদ কিছুই হয়নি তাহসানের</p>
+            </div>
+            <div class="w-full gap-2 grid grid-cols-12 border-b pb-3">
+                <div class="col-span-4">
+                    <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152918_1735971426.webp" alt="">
+                </div>
+                <p class="col-span-8 font-semibold text-lg leading-6">বিয়ে, গায়েহলুদ কিছুই হয়নি তাহসানের</p>
+            </div>
+            <div class="w-full gap-2 grid grid-cols-12 border-b pb-3">
+                <div class="col-span-4">
+                    <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152918_1735971426.webp" alt="">
+                </div>
+                <p class="col-span-8 font-semibold text-lg leading-6">বিয়ে, গায়েহলুদ কিছুই হয়নি তাহসানের</p>
+            </div>
+            <div class="w-full gap-2 grid grid-cols-12 border-b pb-3">
+                <div class="col-span-4">
+                    <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152918_1735971426.webp" alt="">
+                </div>
+                <p class="col-span-8 font-semibold text-lg leading-6">বিয়ে, গায়েহলুদ কিছুই হয়নি তাহসানের</p>
+            </div>
+
+        </div>
+        <div class="col-span-1">
+            <div class="w-full h-[100px]">
+                <img class="h-full w-full object-cover border" src="https://tpc.googlesyndication.com/simgad/5719408925861718514" alt="">
+            </div>
+            <div class="w-full border p-2 rounded-md mt-4"></div>
+            
+        </div>
+
+
+    </div>
+    </section>
+    <!-- survay section -->
+    <section class="w-full my-3">
+    <div class="parent grid grid-cols-1 md:grid-cols-3 gap-x-6">
+        <div class="col-span-1 p-2 border rounded-lg">
+            <div class="w-full flex items-center gap-3 mb-2">
+                <img src="https://www.kalbela.com/assets/verified_icon/opinion-v2.png" alt="">
+                <span class="text-2xl font-semibold">মতামত</span>
+            </div>
+
+            <div class="w-full bg-[#fff9e1] border-b-[3px] border-[#d60000] p-4 mb-4 rounded-md flex items-center">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-red-700">
+                    <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover border">
+                </div>
+                <div class="w-3/5 md:w-4/5 sm:w-full h-28 overflow-hidden px-4 flex flex-col gap-3">
+                    <h4 class="text-lg font-bold text-gray-800">কার্টারের প্রস্থান ট্রাম্পের পুনঃপ্রবেশ</h4>
+                    <p class="h-[63] text-sm text-ellipsis overflow-hidden whitespace-normal line-clamp-4 leading-4 pb-3">
+                        পরিচিত দুনিয়া ছেড়ে চলে গেলেন যুক্তরাষ্ট্রের ৩৯তম প্রেসিডেন্ট জিমি কার্টার। বয়স হয়েছিল ঠিক একশ বছর। সফল প্রেসিডেন্ট বলে বিবেচিত হননি। রোনাল্ড রিগ্যানের বিরুদ্ধে দ্বিতীয় দফার নির্বাচনে ভোটারদের পর্যাপ্ত সমর্থন লাভে ব্যর্থ হয়েছিলেন। ফলে যখন প্রেসিডেন্টের দায়িত্ব থেকে সরে গেলেন, বয়স ছাপ্পান্ন বছর মাত্র। দীর্ঘজীবী কার্টার বাকি সময় ব্যয় করেছেন মানবহিতৈষী তৎপরতা ও শান্তি স্থাপনের দৌত্য কর্মে। এ উদ্দেশ্যে তিনি প্রতিষ্ঠা করেছিলেন কার্টার ফাউন্ডেশন। প্রেসিডেন্ট হিসেবে উজ্জ্বল না হলেও অবসরপ্রাপ্ত প্রেসিডেন্ট হিসেবে তার অবদান সর্বজন স্বীকৃত। অনেকের মত হচ্ছে, এ ক্ষেত্রে তিনি অন্যদের অনুকরণীয় দৃষ্টান্ত।
+                    </p>
+                </div>
+            </div>
+            <div class="w-full bg-[#fff9e1] border-b-[3px] border-[#d60000] p-4 mb-4 rounded-md flex items-center">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-red-700">
+                    <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover">
+                </div>
+                <div class="w-3/5 md:w-4/5 sm:w-full h-28 overflow-hidden px-4 flex flex-col gap-3">
+                    <h4 class="text-lg font-bold text-gray-800">কার্টারের প্রস্থান ট্রাম্পের পুনঃপ্রবেশ</h4>
+                    <p class="h-[63] text-sm text-ellipsis overflow-hidden whitespace-normal line-clamp-4 leading-4 pb-3">
+                        পরিচিত দুনিয়া ছেড়ে চলে গেলেন যুক্তরাষ্ট্রের ৩৯তম প্রেসিডেন্ট জিমি কার্টার। বয়স হয়েছিল ঠিক একশ বছর। সফল প্রেসিডেন্ট বলে বিবেচিত হননি। রোনাল্ড রিগ্যানের বিরুদ্ধে দ্বিতীয় দফার নির্বাচনে ভোটারদের পর্যাপ্ত সমর্থন লাভে ব্যর্থ হয়েছিলেন। ফলে যখন প্রেসিডেন্টের দায়িত্ব থেকে সরে গেলেন, বয়স ছাপ্পান্ন বছর মাত্র। দীর্ঘজীবী কার্টার বাকি সময় ব্যয় করেছেন মানবহিতৈষী তৎপরতা ও শান্তি স্থাপনের দৌত্য কর্মে। এ উদ্দেশ্যে তিনি প্রতিষ্ঠা করেছিলেন কার্টার ফাউন্ডেশন। প্রেসিডেন্ট হিসেবে উজ্জ্বল না হলেও অবসরপ্রাপ্ত প্রেসিডেন্ট হিসেবে তার অবদান সর্বজন স্বীকৃত। অনেকের মত হচ্ছে, এ ক্ষেত্রে তিনি অন্যদের অনুকরণীয় দৃষ্টান্ত।
+                    </p>
+                </div>
+            </div>
+            <div class="w-full bg-[#fff9e1] border-b-[3px] border-[#d60000] p-4 mb-4 rounded-md flex items-center">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-red-700">
+                    <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover border">
+                </div>
+                <div class="w-3/5 md:w-4/5 sm:w-full h-28 overflow-hidden px-4 flex flex-col gap-3">
+                    <h4 class="text-lg font-bold text-gray-800">কার্টারের প্রস্থান ট্রাম্পের পুনঃপ্রবেশ</h4>
+                    <p class="h-[63] text-sm text-ellipsis overflow-hidden whitespace-normal line-clamp-4 leading-4 pb-3">
+                        পরিচিত দুনিয়া ছেড়ে চলে গেলেন যুক্তরাষ্ট্রের ৩৯তম প্রেসিডেন্ট জিমি কার্টার। বয়স হয়েছিল ঠিক একশ বছর। সফল প্রেসিডেন্ট বলে বিবেচিত হননি। রোনাল্ড রিগ্যানের বিরুদ্ধে দ্বিতীয় দফার নির্বাচনে ভোটারদের পর্যাপ্ত সমর্থন লাভে ব্যর্থ হয়েছিলেন। ফলে যখন প্রেসিডেন্টের দায়িত্ব থেকে সরে গেলেন, বয়স ছাপ্পান্ন বছর মাত্র। দীর্ঘজীবী কার্টার বাকি সময় ব্যয় করেছেন মানবহিতৈষী তৎপরতা ও শান্তি স্থাপনের দৌত্য কর্মে। এ উদ্দেশ্যে তিনি প্রতিষ্ঠা করেছিলেন কার্টার ফাউন্ডেশন। প্রেসিডেন্ট হিসেবে উজ্জ্বল না হলেও অবসরপ্রাপ্ত প্রেসিডেন্ট হিসেবে তার অবদান সর্বজন স্বীকৃত। অনেকের মত হচ্ছে, এ ক্ষেত্রে তিনি অন্যদের অনুকরণীয় দৃষ্টান্ত।
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-span-1 p-2 border rounded-lg">
+            <div class="w-full flex items-center gap-3 mb-2 border-b-2 border-[#b32819]">
+                <img src="https://www.kalbela.com/assets/verified_icon/Poll-v2.png" alt="">
+                <span class="text-2xl font-semibold">অনলাইন জরিপ</span>
+            </div>
+            <div class="border p-2 rounded-md flex flex-col gap-y-3">
+                <div class="w-full flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>২৬ ডিসেম্বর ২০২৪, ০৯:৩৬ পিএম</span>
+                    </div>
+                    <i class="fa-solid fa-download"></i>
+                </div>
+                <div class="w-full bg-gray-400 rounded-md overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="">
+                </div>
+                <h2 class="text-lg font-semibold">সচিবালয়ে আগুনের ঘটনা পরিকল্পিত বলে সন্দেহ করছেন অনেকে। আপনি কী মনে করেন?</h2>
+                <h2 class="text-lg font-semibold">মোট ভোট - ১৮৭২২</h2>
+                <form x-data="{ showDivs: false }" class="flex flex-col gap-y-1">
+                    <div class="flex items-center gap gap-2">
+                        <input type="radio" name="istrue" id="option-1" @click="showDivs = true">
+                        <label for="option-1" x-show="!showDivs">পরিকল্পিত</label>
+                        <div class="w-full border border-black rounded-md bg-sky-300 flex items-center justify-between text-xs px-4 py-0.5"
+                            x-show="showDivs">
+                            <span>পরিকল্পিত</span>
+                            <span>৯১.৩২%</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap gap-2">
+                        <input type="radio" name="istrue" id="option-2" @click="showDivs = true">
+                        <label for="option-2" x-show="!showDivs">পরিকল্পিত নয়</label>
+                        <div class="w-full border border-black rounded-md bg-sky-300 flex items-center justify-between text-xs px-4 py-0.5"
+                            x-show="showDivs">
+                            <span>পরিকল্পিত নয়</span>
+                            <span>৯১.৩২%</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap gap-2">
+                        <input type="radio" name="istrue" id="option-3" @click="showDivs = true">
+                        <label for="option-3" x-show="!showDivs">মন্তব্য নেই</label>
+                        <div class="w-full border border-black rounded-md bg-sky-300 flex items-center justify-between text-xs px-4 py-0.5"
+                            x-show="showDivs">
+                            <span>মন্তব্য নেই</span>
+                            <span>৯১.৩২%</span>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm mt-1">মোট ভোটদাতাঃ ১৮,৭৭৫ জন</p>
+                </form>
+                <div class="w-full flex items-center justify-center gap-2 text-2xl">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-copy"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div x-data="tabComponent()" class="col-span-1 border rounded-md p-2">
+            <div class="w-full flex items-center gap-4">
+                <button 
+                @click="activeTab = 'latest'" 
+                :class="activeTab === 'latest' ? 'border-black' : 'border-transparent'" 
+                class="border-b-4">
+                সর্বশেষ
+                </button>
+                <button 
+                @click="activeTab = 'popular'" 
+                :class="activeTab === 'popular' ? 'border-black' : 'border-transparent'" 
+                class="border-b-4">
+                জনপ্রিয়
+                </button>
+            </div>
+            <hr>
+            <div class="w-full">
+                <template x-for="item in contents[activeTab]" :key="item.id">
+                <div class="w-full flex items-center gap-4 py-2">
+                    <span class="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center font-medium text-gray-700 text-xl" x-text="item.id"></span>
+                    <span x-text="item.text"></span>
+                </div>
+                </template>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- selected News -->
      <section class="w-full">
-        <div class="w-11/12 m-auto grid grid-cols-1 lg:grid-cols-4 gap-5">
-
-            <div class="col-span-2 flex flex-col gap-3">
-                <!-- Big card -->
-                <div class="w-full p-2 border rounded-md grid grid-cols-12 gap-2">
-                    <div class="col-span-7"">
-                        <img class="object-cover h-full w-full" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152942_1735981572.webp" alt="">
+        <div class="parent grid grid-cols-4 gap-x-6">
+            <div class="col-span-3">
+                <div class="w-full flex items-center justify-between border-b-4 border-black pb-2">
+                    <div class="flex items-center gap-2">
+                        <img src="https://www.kalbela.com/assets/verified_icon/menu/special.png?v=1" alt="">
+                        <span class="text-xl font-semibold">বাছাইকৃত</span>
                     </div>
-                    <div class="col-span-5 flex flex-col gap-y-2">
-                        <h1 class="text-2xl font-semibold">তারেক রহমানের ৪ মামলা বাতিলের রায়ের বিরুদ্ধে রাষ্ট্রপক্ষের আপিল</h1>
-                        <p class="text-[13px] font-light">বাংলাদেশ জাতীয়তাবাদী দল- বিএনপির ভারপ্রাপ্ত চেয়ারম্যান তারেক রহমানের বিরুদ্ধে দায়েরকৃত চাঁদাবাজির চারটি মামলা বাতিল করেছেন হাইকোর্ট। মামলা বাতিল সংক্রান্ত হাইকোর্টের রায়ের বিরুদ্ধে লিভ টু আপিল করেছে রাষ্ট্রপক্ষ। ইতিমধ্যে রাষ্ট্রপক্ষের আপিল</p>
+                    <div class="h-8 w-8 rounded-full border flex items-center justify-center border-black">
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </div>
-                <!-- small cart part -->
-                 <div class="w-full p-2 border rounded-md grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-3">
-                    <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
-                        <div class="w-full">
-                            <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-2 gap-3">
+                    <div class="flex flex-col border rounded-md overflow-hidden">
+                        <div class="w-full h-[140px]">
+                            <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover">
                         </div>
-                        <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
-                    </div>
-                    <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
-                        <div class="w-full">
-                            <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                        <div class="p-2">
+                            <h4 class="text-lg font-semibold mb-1">বগুড়ায় ১০ টাকায় মিলছে ‘সব রোগের’ চিকিৎসা</h4>
+                            <p class="text-sm font-light line-clamp-3">ধুনট উপজেলার যমুনার বরইতলী চরের বাসিন্দা ওসমান গনি। দীর্ঘদিন ধরে শ্বাসকষ্টে ভুগছেন। অর্থাভাবে ভালো কোনো চিকিৎসকের কাছে যেতে পারছেন না। তা ছাড়া এখান থেকে শহরের দূরত্ব ৫০ থেকে ৬০ কিলোমিটার।</p>
                         </div>
-                        <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
                     </div>
-                    <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
-                        <div class="w-full">
-                            <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                    <div class="flex flex-col border rounded-md overflow-hidden">
+                        <div class="w-full h-[140px]">
+                            <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover">
                         </div>
-                        <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
-                    </div>
-                    <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
-                        <div class="w-full">
-                            <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                        <div class="p-2">
+                            <h4 class="text-lg font-semibold mb-1">বগুড়ায় ১০ টাকায় মিলছে ‘সব রোগের’ চিকিৎসা</h4>
+                            <p class="text-sm font-light line-clamp-3">ধুনট উপজেলার যমুনার বরইতলী চরের বাসিন্দা ওসমান গনি। দীর্ঘদিন ধরে শ্বাসকষ্টে ভুগছেন। অর্থাভাবে ভালো কোনো চিকিৎসকের কাছে যেতে পারছেন না। তা ছাড়া এখান থেকে শহরের দূরত্ব ৫০ থেকে ৬০ কিলোমিটার।</p>
                         </div>
-                        <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
                     </div>
-                    <div class="flex flex-col min-h-52 border-r border-b rounded-lg p-2">
-                        <div class="w-full">
-                            <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152931_1735977020.webp" alt="">
+                    <div class="flex flex-col border rounded-md overflow-hidden">
+                        <div class="w-full h-[140px]">
+                            <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover">
                         </div>
-                        <p class="font-semibold text-lg leading-6">২০২৪ সালে সড়কে ঝরেছে ৮৫৪৩ প্রাণ</p>
+                        <div class="p-2">
+                            <h4 class="text-lg font-semibold mb-1">বগুড়ায় ১০ টাকায় মিলছে ‘সব রোগের’ চিকিৎসা</h4>
+                            <p class="text-sm font-light line-clamp-3">ধুনট উপজেলার যমুনার বরইতলী চরের বাসিন্দা ওসমান গনি। দীর্ঘদিন ধরে শ্বাসকষ্টে ভুগছেন। অর্থাভাবে ভালো কোনো চিকিৎসকের কাছে যেতে পারছেন না। তা ছাড়া এখান থেকে শহরের দূরত্ব ৫০ থেকে ৬০ কিলোমিটার।</p>
+                        </div>
                     </div>
-                 </div>
+                    <div class="flex flex-col border rounded-md overflow-hidden">
+                        <div class="w-full h-[140px]">
+                            <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover">
+                        </div>
+                        <div class="p-2">
+                            <h4 class="text-lg font-semibold mb-1">বগুড়ায় ১০ টাকায় মিলছে ‘সব রোগের’ চিকিৎসা</h4>
+                            <p class="text-sm font-light line-clamp-3">ধুনট উপজেলার যমুনার বরইতলী চরের বাসিন্দা ওসমান গনি। দীর্ঘদিন ধরে শ্বাসকষ্টে ভুগছেন। অর্থাভাবে ভালো কোনো চিকিৎসকের কাছে যেতে পারছেন না। তা ছাড়া এখান থেকে শহরের দূরত্ব ৫০ থেকে ৬০ কিলোমিটার।</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col border rounded-md overflow-hidden">
+                        <div class="w-full h-[140px]">
+                            <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover">
+                        </div>
+                        <div class="p-2">
+                            <h4 class="text-lg font-semibold mb-1">বগুড়ায় ১০ টাকায় মিলছে ‘সব রোগের’ চিকিৎসা</h4>
+                            <p class="text-sm font-light line-clamp-3">ধুনট উপজেলার যমুনার বরইতলী চরের বাসিন্দা ওসমান গনি। দীর্ঘদিন ধরে শ্বাসকষ্টে ভুগছেন। অর্থাভাবে ভালো কোনো চিকিৎসকের কাছে যেতে পারছেন না। তা ছাড়া এখান থেকে শহরের দূরত্ব ৫০ থেকে ৬০ কিলোমিটার।</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="w-full col-span-1 flex flex-col gap-3 border p-2 rounded-md">
-                
-                <div class="w-full border-b pb-2">
-                    <img src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152930_1735976931.webp" alt="">
-                    <p class="text-xl font-semibold">অঞ্জনার মৃত্যু নিয়ে রহস্য</p>                
+            <div class="col-span-1 flex flex-col gap-y-6">
+                <div class="w-full h-64 shadow-md">
+                    <img src="https://tpc.googlesyndication.com/simgad/6308915113350300582" alt="" class="h-full w-full object-cover">
                 </div>
-
-                <div class="w-full gap-2 grid grid-cols-12 border-b pb-3">
-                    <div class="col-span-4">
-                        <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152918_1735971426.webp" alt="">
-                    </div>
-                    <p class="col-span-8 font-semibold text-lg leading-6">বিয়ে, গায়েহলুদ কিছুই হয়নি তাহসানের</p>
+                <div class="w-full h-64 shadow-md">
+                    <img src="https://tpc.googlesyndication.com/simgad/9887779227935732441" alt="" class="h-full w-full object-cover">
                 </div>
-                <div class="w-full gap-2 grid grid-cols-12 border-b pb-3">
-                    <div class="col-span-4">
-                        <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152918_1735971426.webp" alt="">
-                    </div>
-                    <p class="col-span-8 font-semibold text-lg leading-6">বিয়ে, গায়েহলুদ কিছুই হয়নি তাহসানের</p>
-                </div>
-                <div class="w-full gap-2 grid grid-cols-12 border-b pb-3">
-                    <div class="col-span-4">
-                        <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152918_1735971426.webp" alt="">
-                    </div>
-                    <p class="col-span-8 font-semibold text-lg leading-6">বিয়ে, গায়েহলুদ কিছুই হয়নি তাহসানের</p>
-                </div>
-                <div class="w-full gap-2 grid grid-cols-12 border-b pb-3">
-                    <div class="col-span-4">
-                        <img class="h-full w-full object-cover" src="https://www.kalbela.com/assets/news_photos/2025/01/04/image_152918_1735971426.webp" alt="">
-                    </div>
-                    <p class="col-span-8 font-semibold text-lg leading-6">বিয়ে, গায়েহলুদ কিছুই হয়নি তাহসানের</p>
-                </div>
-
             </div>
-            <div class="col-span-1">
-                <div class="w-full h-[100px]">
-                    <img class="h-full w-full object-cover border" src="https://tpc.googlesyndication.com/simgad/5719408925861718514" alt="">
-                </div>
-                <div class="w-full border p-2 rounded-md mt-4"></div>
-                
-            </div>
-
-
         </div>
      </section>
-     <!-- survay section -->
-      <section class="w-full my-3">
-        <div class="parent grid grid-cols-1 md:grid-cols-3 gap-x-6">
-            <div class="col-span-1 p-2 border rounded-lg">
-                <div class="w-full flex items-center gap-3 mb-2">
-                    <img src="https://www.kalbela.com/assets/verified_icon/opinion-v2.png" alt="">
-                    <span class="text-2xl font-semibold">মতামত</span>
-                </div>
-
-                <div class="w-full bg-[#fff9e1] border-b-[3px] border-[#d60000] p-4 mb-4 rounded-md flex items-center">
-                    <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-red-700">
-                        <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover border">
-                    </div>
-                    <div class="w-3/5 md:w-4/5 sm:w-full h-28 overflow-hidden px-4 flex flex-col gap-3">
-                        <h4 class="text-lg font-bold text-gray-800">কার্টারের প্রস্থান ট্রাম্পের পুনঃপ্রবেশ</h4>
-                        <p class="h-[63] text-sm text-ellipsis overflow-hidden whitespace-normal line-clamp-4 leading-4 pb-3">
-                            পরিচিত দুনিয়া ছেড়ে চলে গেলেন যুক্তরাষ্ট্রের ৩৯তম প্রেসিডেন্ট জিমি কার্টার। বয়স হয়েছিল ঠিক একশ বছর। সফল প্রেসিডেন্ট বলে বিবেচিত হননি। রোনাল্ড রিগ্যানের বিরুদ্ধে দ্বিতীয় দফার নির্বাচনে ভোটারদের পর্যাপ্ত সমর্থন লাভে ব্যর্থ হয়েছিলেন। ফলে যখন প্রেসিডেন্টের দায়িত্ব থেকে সরে গেলেন, বয়স ছাপ্পান্ন বছর মাত্র। দীর্ঘজীবী কার্টার বাকি সময় ব্যয় করেছেন মানবহিতৈষী তৎপরতা ও শান্তি স্থাপনের দৌত্য কর্মে। এ উদ্দেশ্যে তিনি প্রতিষ্ঠা করেছিলেন কার্টার ফাউন্ডেশন। প্রেসিডেন্ট হিসেবে উজ্জ্বল না হলেও অবসরপ্রাপ্ত প্রেসিডেন্ট হিসেবে তার অবদান সর্বজন স্বীকৃত। অনেকের মত হচ্ছে, এ ক্ষেত্রে তিনি অন্যদের অনুকরণীয় দৃষ্টান্ত।
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full bg-[#fff9e1] border-b-[3px] border-[#d60000] p-4 mb-4 rounded-md flex items-center">
-                    <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-red-700">
-                        <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover">
-                    </div>
-                    <div class="w-3/5 md:w-4/5 sm:w-full h-28 overflow-hidden px-4 flex flex-col gap-3">
-                        <h4 class="text-lg font-bold text-gray-800">কার্টারের প্রস্থান ট্রাম্পের পুনঃপ্রবেশ</h4>
-                        <p class="h-[63] text-sm text-ellipsis overflow-hidden whitespace-normal line-clamp-4 leading-4 pb-3">
-                            পরিচিত দুনিয়া ছেড়ে চলে গেলেন যুক্তরাষ্ট্রের ৩৯তম প্রেসিডেন্ট জিমি কার্টার। বয়স হয়েছিল ঠিক একশ বছর। সফল প্রেসিডেন্ট বলে বিবেচিত হননি। রোনাল্ড রিগ্যানের বিরুদ্ধে দ্বিতীয় দফার নির্বাচনে ভোটারদের পর্যাপ্ত সমর্থন লাভে ব্যর্থ হয়েছিলেন। ফলে যখন প্রেসিডেন্টের দায়িত্ব থেকে সরে গেলেন, বয়স ছাপ্পান্ন বছর মাত্র। দীর্ঘজীবী কার্টার বাকি সময় ব্যয় করেছেন মানবহিতৈষী তৎপরতা ও শান্তি স্থাপনের দৌত্য কর্মে। এ উদ্দেশ্যে তিনি প্রতিষ্ঠা করেছিলেন কার্টার ফাউন্ডেশন। প্রেসিডেন্ট হিসেবে উজ্জ্বল না হলেও অবসরপ্রাপ্ত প্রেসিডেন্ট হিসেবে তার অবদান সর্বজন স্বীকৃত। অনেকের মত হচ্ছে, এ ক্ষেত্রে তিনি অন্যদের অনুকরণীয় দৃষ্টান্ত।
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full bg-[#fff9e1] border-b-[3px] border-[#d60000] p-4 mb-4 rounded-md flex items-center">
-                    <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-red-700">
-                        <img src="https://images.pexels.com/photos/29827505/pexels-photo-29827505/free-photo-of-aerial-landscape-view-in-the-philippines.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="h-full w-full object-cover border">
-                    </div>
-                    <div class="w-3/5 md:w-4/5 sm:w-full h-28 overflow-hidden px-4 flex flex-col gap-3">
-                        <h4 class="text-lg font-bold text-gray-800">কার্টারের প্রস্থান ট্রাম্পের পুনঃপ্রবেশ</h4>
-                        <p class="h-[63] text-sm text-ellipsis overflow-hidden whitespace-normal line-clamp-4 leading-4 pb-3">
-                            পরিচিত দুনিয়া ছেড়ে চলে গেলেন যুক্তরাষ্ট্রের ৩৯তম প্রেসিডেন্ট জিমি কার্টার। বয়স হয়েছিল ঠিক একশ বছর। সফল প্রেসিডেন্ট বলে বিবেচিত হননি। রোনাল্ড রিগ্যানের বিরুদ্ধে দ্বিতীয় দফার নির্বাচনে ভোটারদের পর্যাপ্ত সমর্থন লাভে ব্যর্থ হয়েছিলেন। ফলে যখন প্রেসিডেন্টের দায়িত্ব থেকে সরে গেলেন, বয়স ছাপ্পান্ন বছর মাত্র। দীর্ঘজীবী কার্টার বাকি সময় ব্যয় করেছেন মানবহিতৈষী তৎপরতা ও শান্তি স্থাপনের দৌত্য কর্মে। এ উদ্দেশ্যে তিনি প্রতিষ্ঠা করেছিলেন কার্টার ফাউন্ডেশন। প্রেসিডেন্ট হিসেবে উজ্জ্বল না হলেও অবসরপ্রাপ্ত প্রেসিডেন্ট হিসেবে তার অবদান সর্বজন স্বীকৃত। অনেকের মত হচ্ছে, এ ক্ষেত্রে তিনি অন্যদের অনুকরণীয় দৃষ্টান্ত।
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-span-1 p-2 border rounded-lg">
-                <div class="w-full flex items-center gap-3 mb-2">
-                    <img src="https://www.kalbela.com/assets/verified_icon/Poll-v2.png" alt="">
-                    <span class="text-2xl font-semibold">অনলাইন জরিপ</span>
-                </div>
-            </div>
-        </div>
-      </section>
     <!-- footer -->
     <footer class="w-full border-t">
         <div class="w-10/12 m-auto grid grid-cols-1 lg:grid-cols-4 gap-3 mb-5">
