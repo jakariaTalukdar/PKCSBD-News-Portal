@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: bangla;
+  src: url(font/normal.woff2);
+}
+* {
+  font-family: bangla;
+}
+
 
 .no-scrollbar {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
